@@ -59,10 +59,6 @@ jobs:
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@c83e99a12397014162531ca125c94549db55dd84
         with:
           cache-node-modules: true
-      - name: Setup Bazel
-        uses: angular/dev-infra/github-actions/bazel/setup@c83e99a12397014162531ca125c94549db55dd84
-      - name: Setup Bazel Remote Caching
-        uses: angular/dev-infra/github-actions/bazel/configure-remote@c83e99a12397014162531ca125c94549db55dd84
       - name: Install node modules
         run: yarn install --frozen-lockfile --network-timeout 100000
       - name: Run CI tests for framework
